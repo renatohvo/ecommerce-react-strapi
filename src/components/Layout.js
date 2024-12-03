@@ -5,6 +5,7 @@ import Footer from './shared/footer';
 import { Helmet } from 'react-helmet-async';
 
 import 'bootswatch/dist/lux/bootstrap.css'
+import styles from './Layout.module.scss';
 
 const Layout = ({ title, description, children }) => {
     return (
@@ -14,7 +15,7 @@ const Layout = ({ title, description, children }) => {
                 <meta name="description" content={description || "My Store"} />
             </Helmet>
             <Header />
-            <main className="container">
+            <main className={`container ${styles.main}`}>
                 {children}
             </main>
             <Footer />
